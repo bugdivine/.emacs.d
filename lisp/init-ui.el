@@ -30,4 +30,27 @@
 
 (golden-ratio-mode 1)
 
+;; Display clock
+(display-time)
+(defface egoge-display-time
+  '((((type x w32 mac))
+     ;; #060525 is the background colour of my default face.
+     (:foreground "#060525" :inherit bold))
+    (((type tty))
+     (:foreground "blue")))
+  "Face used to display the time in the mode line.")
+(setq display-time-format "%I:%M %p")
+
+;; Display battery
+(display-battery-mode 1)
+
+;; Align these to right
+(setq global-mode-string (remove 'display-time-string global-mode-string))
+(setq global-mode-string (remove 'battery-mode-line-string global-mode-string))
+(setq mode-line-end-spaces
+      (list (propertize " " 'display '(space :align-to (- right 20)))
+	    'battery-mode-line-string
+	    " "
+	    'display-time-string))
+
 (provide 'init-ui)
