@@ -3,6 +3,6 @@
 (require 'init-elpa)
 (require 'init-ui)
 (require 'init-editing)
-; (require 'init-navigation)
+(require 'init-navigation)
 
 (provide 'init)
