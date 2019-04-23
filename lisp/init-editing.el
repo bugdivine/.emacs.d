@@ -2,6 +2,7 @@
 (require 'saveplace)
 (require-package 'rainbow-delimiters)
 (require-package 'flycheck)
+(require-package 'yaml-mode)
 
 ;; Highlights matching parentheses
 (show-paren-mode 1)
@@ -43,5 +44,10 @@
 (global-set-key (kbd "C-;") 'toggle-comment-on-line)
 
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+
+;; Automatically indent on new lines
+(add-hook 'yaml-mode-hook
+          (lambda ()
+            (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
 
 (provide 'init-editing)
