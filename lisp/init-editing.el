@@ -3,6 +3,8 @@
 (require-package 'rainbow-delimiters)
 (require-package 'flycheck)
 (require-package 'yaml-mode)
+(require-package 'yaml-tomato)
+(require-package 'auto-complete)
 
 ;; Highlights matching parentheses
 (show-paren-mode 1)
@@ -44,6 +46,10 @@
 (global-set-key (kbd "C-;") 'toggle-comment-on-line)
 
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+
+;; Enable auto complete in prog mode and yaml mode
+(add-hook 'prog-mode-hook 'auto-complete-mode)
+(add-hook 'yaml-mode-hook 'auto-complete-mode)
 
 ;; Automatically indent on new lines
 (add-hook 'yaml-mode-hook
