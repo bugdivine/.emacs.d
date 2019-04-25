@@ -4,5 +4,6 @@
 (require 'init-ui)
 (require 'init-editing)
 (require 'init-navigation)
+(require 'init-vc)
 
 (provide 'init)
