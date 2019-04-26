@@ -2,6 +2,11 @@
 (require-package 'neotree)
 (require-package 'projectile)
 (require-package 'all-the-icons)
+(require-package 'all-the-icons-dired)
+(require-package 'all-the-icons-gnus)
+(require-package 'all-the-icons-ivy)
+;; Run this for the first time
+;; (all-the-icons-install-fonts)
 
 ;; Enable projectile mode
 (projectile-mode +1)
