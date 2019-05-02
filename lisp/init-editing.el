@@ -56,4 +56,10 @@
           (lambda ()
             (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
 
+;; Sync emacs clipboard with OS clipboard
+(setq x-select-enable-clipboard t)
+
+;; Auto refresh buffer
+(global-auto-revert-mode t)
+
 (provide 'init-editing)
