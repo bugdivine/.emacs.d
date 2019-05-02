@@ -50,6 +50,7 @@
 ;; Enable auto complete in prog mode and yaml mode
 (add-hook 'prog-mode-hook 'auto-complete-mode)
 (add-hook 'yaml-mode-hook 'auto-complete-mode)
+(add-hook 'org-mode-hook 'auto-complete-mode)
 
 ;; Automatically indent on new lines
 (add-hook 'yaml-mode-hook
