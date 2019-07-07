@@ -63,4 +63,7 @@
 ;; Auto refresh buffer
 (global-auto-revert-mode t)
 
+;; Auto indent in org-mode
+(setq org-startup-indented t)
+
 (provide 'init-editing)

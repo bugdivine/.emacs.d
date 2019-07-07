@@ -53,4 +53,7 @@
 	    " "
 	    'display-time-string))
 
+;; Hide line wrap character
+(set-display-table-slot standard-display-table 'wrap ?\ )
+
 (provide 'init-ui)
