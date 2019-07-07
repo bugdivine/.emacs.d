@@ -11,7 +11,7 @@
 (when (fboundp 'scroll-bar-mode)
   (scroll-bar-mode -1))
 
-(set-face-attribute 'default nil :family "Monaco" :height 120)
+(set-face-attribute 'default nil :family "Monaco" :height 150)
 (setq-default line-spacing 0.4)
 
 (setq
